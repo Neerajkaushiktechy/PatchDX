@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  a {
+    @apply cursor-pointer
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer components {
+  .login .form-input {
+    @apply bg-transparent border-[1px] border-white text-white rounded-md md:rounded-[10px] pl-[40px] md:pl-[60px] pr-[30px] py-3 text-sm md:text-xl w-full
+  }
+  .login .form-input:focus {
+    @apply outline-none
+  }
+  .login .form-input::placeholder {
+    @apply text-white
+  }
+  .sidebar-menu-items ul li {
+    @apply text-sm mb-[22px]
+  }
+  .sidebar-menu-items ul {
+    @apply text-base ml-9
+  }
+  .sidebar-menu-items ul li:last-child {
+    @apply mb-0
+  }
+  .active-sidebar-menu {
+    @apply bg-primary rounded-[14px] 
+  }
+  .active-sidebar-menu button{
+    @apply text-white 
+  }
+  .active-sidebar-menu .menu-name{
+    @apply text-white  
+  }
+  .active-sidebar-menu ul li{
+    @apply text-white 
+  }
+  .active-sidebar-menu svg.menu-icon {
+    @apply inline text-white
+  }
+  svg.menu-icon {
+    @apply text-secondary-text
+  }
+  .accordian-toggle svg.menu-icon {
+    @apply inline
+  }
+  .accordian-toggle svg {
+    @apply hidden
+  } 
+  .custom-table {
+    @apply rounded-lg 
+  }
+
+  .custom-table th {
+    @apply font-bold text-sm 2xl:text-base text-secondary-text leading-6 p-4 capitalize bg-white text-left whitespace-nowrap
+  }
+
+  .custom-table th:first-child {
+    @apply rounded-tl-lg
+  }
+
+  .custom-table th:last-child {
+    @apply rounded-tr-lg
+  }
+
+  .custom-table td {
+    @apply font-medium text-sm 2xl:text-base text-secondary-text leading-6 p-4 whitespace-nowrap border-t border-table-outline
+  }
+  .custom-table tr:nth-child(odd) td {
+    @apply bg-table-stripe
+  }
+  .main-title {
+    @apply text-lg text-secondary-text font-semibold
+  }
+  .form-control {
+    @apply bg-input-bg rounded-md px-4 py-2 h-10 md:h-12 border-transparent lg:text-sm 2xl:text-base !important
+  }
+  .select-form-input select {
+    @apply bg-input-bg rounded-md px-4 py-2 h-12 border-transparent lg:text-sm 2xl:text-base !important
+  }
+  .form-input input {
+    @apply bg-input-bg rounded-md px-4 py-2 h-12 border-transparent lg:text-sm 2xl:text-base !important
+  }
+  .textarea-box {
+    @apply h-[200px] resize-none !important
+  }
+  .card {
+    @apply rounded-[10px] shadow-full p-6
+  }
+  .form-label {
+    @apply block text-label text-sm font-semibold
+  }
+  .custom-radio {
+    @apply border border-primary mr-2
+  }
+  input[type='radio'] {
+    @apply focus:ring-transparent
+}
+  [type='radio']:checked {
+    @apply bg-primary
+}
+  .custom-radio:focus {
+    @apply ring-transparent
+  }
+  .btn-theme {
+    @apply bg-primary rounded-[10px] px-4 md:px-6 2xl:px-8 py-[10px] text-sm md:text-base text-white font-medium border border-primary
+  }
+  .btn-border {
+    @apply bg-transparent text-primary
+  }
+  input[type="checkbox"] {
+    @apply focus:ring-transparent
+  } 
+  input[type="checkbox"]:checked {
+    @apply text-primary 
+  } 
+  .search-bar {
+    @apply pl-11 !important
+  }
+  .spinner-overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-[9999]
+  }
+  .spinner-container svg {
+    @apply w-[50px] h-[50px] fill-primary
+  }
+  .fixed-sidebar {
+    @apply fixed h-screen
+  }
+  .normal-space {
+    @apply whitespace-normal !important
+  }
+  .bg-hightlight-green {
+    @apply bg-light-green !important
+  }
+  .bg-hightlight-purple {
+    @apply bg-light-purple-td !important
+  }
+  .disabled-button {
+    opacity: 0.5;
+  }
+}
+
+.modal-popup>div {
+  @apply max-w-[560px] rounded-[14px] p-0
+ }
+ /* .modal-body {
+  @apply p-[30px]
+ } */
+ .options-list div {
+  @apply mb-4
+ }
+ .options-list div:last-child {
+  @apply mb-0
+ }
+ .options-list input {
+  @apply text-primary
+ }
+
+ .custom-accordian .item {
+  @apply mb-4 sm:mb-7
+}
+.custom-accordian .item .label {
+  @apply text-base sm:text-lg text-label mb-2 sm:mb-4 font-semibold
+}
+.custom-accordian .item .value {
+  @apply text-base sm:text-lg text-value font-medium
+}
+
+.ProseMirror {
+  @apply p-2 border border-gray-300 rounded min-h-[200px];
+}
+
+.ProseMirror-focused {
+  @apply outline-none;
+}
+
+.ProseMirror p {
+  @apply m-0;
+}
+
+.control-group {
+  @apply flex flex-wrap mb-2;
+}
+
+.control-group button {
+  @apply mr-1 py-2 px-2 border border-gray-300 rounded bg-white cursor-pointer text-sm flex items-center mb-1;
+}
+
+.control-group button svg {
+  @apply mr-1
+}
+
+.control-group button.is-active {
+  @apply bg-primary text-white; 
+}
+
+.control-group button:disabled {
+  @apply bg-gray-200 cursor-not-allowed;
+}
+
+.mention-list {
+  @apply bg-white border border-gray-200 rounded-lg shadow-md max-h-52 overflow-auto
+}
+.mention-list li {
+  @apply px-3 pt-2 text-sm whitespace-nowrap
+}
+
+.mention {
+  @apply bg-mention p-2 rounded-lg text-primary font-medium
+}
+.tiptap.ProseMirror {
+  @apply h-[calc(100vh-410px)] overflow-y-auto
+}
+
+.mention {
+  text-decoration: underline;
+}
